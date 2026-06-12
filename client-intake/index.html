@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outset Solutions — Let's Talk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <div class="header">
+      <div class="logo">Outset Solutions</div>
+      <p class="tagline">Building software that takes the load off your work.</p>
+    </div>
+
+    <div class="intro">
+      <h1>Let's find your solution.</h1>
+      <p>Answer three quick questions so we can make the most of our time together. No tech knowledge needed — just tell us about your world.</p>
+    </div>
+
+    <form id="intake-form" action="https://formspree.io/f/xrevyybb" method="POST">
+
+      <div class="question">
+        <div class="question-number">01</div>
+        <label for="q1">Tell me about your role and your duties.</label>
+        <p class="hint">Who you are and what you do day to day.</p>
+        <textarea id="q1" name="role_and_duties" rows="4" placeholder="e.g. I'm the practice manager at a dental clinic in Auckland. Day to day I manage appointments, coordinate the team, and make sure everything runs on time..." required></textarea>
+      </div>
+
+      <div class="question">
+        <div class="question-number">02</div>
+        <label for="q2">What's the one task in your day that wastes the most time or causes the most frustration — and what does it cost you when it goes wrong?</label>
+        <p class="hint">Be as specific as you can. The more detail, the better we can help.</p>
+        <textarea id="q2" name="pain_point" rows="4" placeholder="e.g. Every morning we manually check which supplies need restocking. When we get it wrong, we run out mid-procedure..." required></textarea>
+      </div>
+
+      <div class="question">
+        <div class="question-number">03</div>
+        <label for="q3">What would your role look like if that problem was gone?</label>
+        <p class="hint">Paint the picture — what changes for you and the people around you?</p>
+        <textarea id="q3" name="desired_outcome" rows="4" placeholder="e.g. I'd start each day knowing everything is in order. Less stress, fewer mistakes, more time to focus on what actually matters..." required></textarea>
+      </div>
+
+      <div class="contact-section">
+        <h3>Your details</h3>
+        <div class="contact-row">
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="business">Business Name</label>
+            <input type="text" id="business" name="business_name" placeholder="Your business" required />
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+64 21 000 0000" />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit">Send My Answers →</button>
+
+    </form>
+
+    <div id="confirmation" class="confirmation" style="display:none;">
+      <div class="tick">✓</div>
+      <h2>Got it. Thank you.</h2>
+      <p>Don will review your answers before your meeting. You'll hear from him shortly.</p>
+    </div>
+
+    <div class="footer">
+      <p>Outset Solutions · Auckland, NZ · <a href="mailto:don.aukino@outsetsolutions.co.nz">don.aukino@outsetsolutions.co.nz</a></p>
+    </div>
+
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>

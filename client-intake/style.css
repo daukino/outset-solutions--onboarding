@@ -1,0 +1,203 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
+  color: #1a1a2e;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+/* Header */
+.header {
+  margin-bottom: 48px;
+}
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  letter-spacing: -0.02em;
+}
+.tagline {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* Intro */
+.intro {
+  margin-bottom: 48px;
+}
+.intro h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.intro p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Questions */
+.question {
+  background: white;
+  border-radius: 12px;
+  padding: 28px 28px 24px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e4f0;
+  position: relative;
+}
+
+.question-number {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  background: #f0f2f8;
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+
+.question label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.hint {
+  font-size: 0.82rem;
+  color: #999;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d0d5e8;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  color: #1a1a2e;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fafbff;
+  line-height: 1.6;
+}
+textarea:focus { border-color: #1a1a2e; background: white; }
+
+/* Contact section */
+.contact-section {
+  background: white;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+  border: 1px solid #e0e4f0;
+}
+.contact-section h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+.contact-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.contact-row:last-child { margin-bottom: 0; }
+.field { flex: 1; }
+.field label {
+  display: block;
+  font-size: 0.78rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.field input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d0d5e8;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  color: #1a1a2e;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fafbff;
+  font-family: inherit;
+}
+.field input:focus { border-color: #1a1a2e; background: white; }
+
+/* Submit */
+.btn-submit {
+  width: 100%;
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: inherit;
+  letter-spacing: 0.01em;
+}
+.btn-submit:hover { background: #2d2d4a; }
+
+/* Confirmation */
+.confirmation {
+  text-align: center;
+  padding: 64px 24px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e0e4f0;
+}
+.tick {
+  font-size: 3rem;
+  color: #2e7d32;
+  margin-bottom: 16px;
+}
+.confirmation h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.confirmation p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  margin-top: 48px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #aaa;
+}
+.footer a { color: #888; text-decoration: none; }
+.footer a:hover { color: #1a1a2e; }
+
+@media (max-width: 600px) {
+  .contact-row { flex-direction: column; }
+  .intro h1 { font-size: 1.6rem; }
+}
