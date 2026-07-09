@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INV-2026-001 — Outset Solutions</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    color: #333;
+    background: #fff;
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+
+  .brand h1 { font-size: 20px; font-weight: 700; color: #2e7d32; margin-bottom: 6px; }
+  .brand p { font-size: 11px; color: #555; line-height: 1.6; }
+
+  .inv-meta { text-align: right; }
+  .inv-meta .inv-number { font-size: 17px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+  .inv-meta p { font-size: 11px; color: #555; line-height: 1.6; }
+
+  hr { border: none; border-top: 2px solid #2e7d32; margin: 12px 0; }
+
+  .billed-to { margin-bottom: 14px; }
+  .billed-to .label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 3px; }
+  .billed-to .company { font-weight: 700; font-size: 13px; color: #111; }
+  .billed-to .sub { font-size: 11px; color: #555; margin-top: 1px; }
+
+  .section-heading { font-size: 12px; font-weight: 700; color: #2e7d32; margin: 14px 0 6px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+
+  thead th {
+    text-align: left; color: #999; font-weight: 600; font-size: 10px;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    padding: 5px 6px; border-bottom: 1px solid #e0e0e0;
+  }
+  thead th:last-child { text-align: right; }
+
+  tbody td {
+    padding: 7px 6px; border-bottom: 1px solid #f0f0f0;
+    vertical-align: top; color: #333; line-height: 1.35;
+  }
+  tbody td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+  tbody td:nth-child(2) { text-align: center; }
+  tbody td:nth-child(3) { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .note { font-size: 10px; color: #777; font-style: italic; margin-top: 6px; line-height: 1.45; }
+
+  .totals { margin-top: 10px; border-top: 1px solid #e0e0e0; }
+  .totals table { width: 100%; }
+  .totals td { padding: 6px 6px; font-size: 12px; }
+  .totals td:first-child { width: 55%; }
+  .totals td:nth-child(2), .totals td:nth-child(3) { width: 14%; }
+  .totals td:last-child { text-align: right; font-variant-numeric: tabular-nums; width: 17%; }
+  .totals .subtotal td { color: #444; border-bottom: 1px solid #f0f0f0; }
+  .totals .gst td { color: #444; border-bottom: 1px solid #f0f0f0; }
+  .totals .total-due td { font-weight: 700; font-size: 13px; color: #111; padding-top: 8px; }
+
+  .two-col { display: flex; gap: 14px; margin-top: 14px; }
+  .two-col .payment-box { flex: 1; margin-top: 0; }
+
+  .payment-box { border: 1px solid #c8e6c9; border-radius: 5px; padding: 12px 14px; margin-top: 14px; }
+  .payment-box h3 { font-size: 12px; font-weight: 700; color: #2e7d32; margin-bottom: 7px; }
+  .payment-box p { font-size: 11.5px; color: #333; line-height: 1.75; }
+  .payment-box p strong { font-weight: 600; }
+
+  .footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #aaa;
+  }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="brand">
+      <h1>Outset Solutions</h1>
+      <p>
+        Don Aukino<br>
+        aukino.don@gmail.com<br>
+        ABN 78 236 492 252<br>
+        Westpac — BSB 735-318 — Acct 615387
+      </p>
+    </div>
+    <div class="inv-meta">
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#555;margin-bottom:4px;">Tax Invoice</div>
+      <div class="inv-number">INV-2026-001</div>
+      <p>Date: 4 July 2026<br>Due: See payment schedule</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="billed-to">
+    <div class="label">Billed to</div>
+    <div class="company">CIRLYQ Vaka</div>
+    <div class="sub">Cook Island Rugby League &amp; Youth Development QLD</div>
+  </div>
+
+  <div class="section-heading">Platform Administration Fees — Estimated (Full Registration)</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:55%">Description</th>
+        <th style="width:12%">Qty</th>
+        <th style="width:16%">Unit Price</th>
+        <th style="width:17%">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Junior Player Registration Fee (U8, U10, U12)</td>
+        <td>100</td>
+        <td>$1.99 AUD</td>
+        <td>$199.00 AUD</td>
+      </tr>
+      <tr>
+        <td>Senior Player Registration Fee (U13–Open)</td>
+        <td>130</td>
+        <td>$4.99 AUD</td>
+        <td>$648.70 AUD</td>
+      </tr>
+      <tr>
+        <td>Staff Registration Fee (Coach / Manager / FAO / Leaguesafe)</td>
+        <td>50</td>
+        <td>$4.99 AUD</td>
+        <td>$249.50 AUD</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="note">* Estimated based on 14 teams at full registration (17 players + 2 coaches + 1 manager + 1 FAO per team). Final amount will be reconciled against actual registrations at the close of the registration period.</p>
+
+  <div class="section-heading">Platform Hosting</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:55%">Description</th>
+        <th style="width:12%">Months</th>
+        <th style="width:16%">Monthly Rate</th>
+        <th style="width:17%">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cloud Hosting — July to October 2026</td>
+        <td>4</td>
+        <td>$20.00 AUD</td>
+        <td>$80.00 AUD</td>
+      </tr>
+      <tr>
+        <td>Development Tools &amp; Infrastructure — July to October 2026</td>
+        <td>4</td>
+        <td>$40.00 AUD</td>
+        <td>$160.00 AUD</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="totals">
+    <table>
+      <tr class="subtotal">
+        <td>Subtotal</td><td></td><td></td>
+        <td>$1,337.20 AUD</td>
+      </tr>
+      <tr class="gst">
+        <td>GST (10%)</td><td></td><td></td>
+        <td>$133.72 AUD</td>
+      </tr>
+      <tr class="total-due">
+        <td>Total Due</td><td></td><td></td>
+        <td>$1,470.92 AUD</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="two-col">
+    <div class="payment-box">
+      <h3>Payment Schedule</h3>
+      <p>
+        <strong>Platform Hosting — $264.00 AUD (inc. GST)</strong><br>
+        Due by <strong>31 July 2026</strong><br>
+        Covers cloud hosting and infrastructure through to October 2026.<br><br>
+        <strong>Platform Administration Fees — $1,206.92 AUD (estimated, inc. GST)</strong><br>
+        Due upon reconciliation at close of registration period. Final amount adjusted against actual registrations.
+      </p>
+    </div>
+    <div class="payment-box">
+      <h3>Payment Details</h3>
+      <p>
+        <strong>Bank:</strong> Westpac<br>
+        <strong>Account Name:</strong> Don Aukino<br>
+        <strong>BSB:</strong> 735-318<br>
+        <strong>Account Number:</strong> 615387<br>
+        <strong>Reference:</strong> INV-2026-001
+      </p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Outset Solutions</span>
+    <span>Page 1</span>
+  </div>
+
+</body>
+</html>
