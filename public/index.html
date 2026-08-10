@@ -387,10 +387,29 @@ footer{background:var(--ink);border-top:1px solid rgba(140,175,210,.08);padding:
   .contact-wrap{grid-template-columns:1fr;gap:44px}
   .form-row{grid-template-columns:1fr}
 }
+/* Hamburger button */
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px;border-radius:8px;transition:background .2s}
+.nav-burger:hover{background:rgba(255,255,255,.08)}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* Mobile menu overlay */
+.mob-menu{position:fixed;inset:0;z-index:150;background:rgba(8,14,26,.97);backdrop-filter:blur(20px);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:36px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font:300 2.2rem/1 system-ui,-apple-system,sans-serif;color:var(--text);text-decoration:none;letter-spacing:-.3px;transition:color .2s}
+.mob-menu a:hover{color:var(--amber)}
+.mob-menu .mob-cta{margin-top:8px;font-size:1rem;font-weight:600;color:#fff;background:var(--amber);padding:14px 36px;border-radius:12px}
+.mob-menu .mob-cta:hover{background:var(--amber-lt);color:#fff}
 @media(max-width:600px){
-  .nav-links a:not(.nav-cta){display:none}
+  .nav-links{display:none}
+  .nav-burger{display:flex}
   .sec{padding:70px 18px}
   .hero-content{padding:100px 18px 210px}
+  .svc-ap-vis{display:none}
+  .svc-ap-inner{grid-template-columns:1fr}
+  .svc-ap{padding:72px 24px}
+  .svc-ap.flip .svc-ap-text{order:unset}
 }
 </style>
 
@@ -414,8 +433,19 @@ footer{background:var(--ink);border-top:1px solid rgba(140,175,210,.08);padding:
       <a href="#contact">Contact</a>
       <a href="#contact" class="nav-cta">Get in Touch</a>
     </div>
+    <button class="nav-burger" id="navBurger" onclick="toggleMobMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- Mobile menu -->
+<div class="mob-menu" id="mobMenu">
+  <a href="#services" onclick="closeMobMenu()">Services</a>
+  <a href="#work" onclick="closeMobMenu()">Work</a>
+  <a href="#contact" onclick="closeMobMenu()">Contact</a>
+  <a href="#contact" class="mob-cta" onclick="closeMobMenu()">Get in Touch</a>
+</div>
 
 <!-- Hero — dark -->
 <section class="hero" id="home">
@@ -1015,6 +1045,21 @@ function closeService(){
   document.getElementById('svcDetail').classList.remove('open');
   document.body.style.overflow='';
 }
+
+/* Mobile menu */
+function toggleMobMenu(){
+  const menu=document.getElementById('mobMenu');
+  const burger=document.getElementById('navBurger');
+  const open=menu.classList.toggle('open');
+  burger.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+function closeMobMenu(){
+  document.getElementById('mobMenu').classList.remove('open');
+  document.getElementById('navBurger').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobMenu();});
 
 /* Preview modals */
 const previewLabels={signup:'Member Sign-Up',tiers:'Membership Tiers',payment:'Payment Processing',admin:'Admin Dashboard',email:'Automated Emails',mobile:'Mobile Experience'};
