@@ -1,4 +1,7 @@
+node_modules/
+data/
 .env
-*.png
-*.jpg
-*.jpeg
+*.log
+*.pdf
+Invoicing/
+client-intake/
