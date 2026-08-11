@@ -208,6 +208,41 @@ a{color:inherit;text-decoration:none}
 .cirl-chk.blu{border-color:rgba(59,130,246,.25);background:rgba(59,130,246,.03);color:#1d4ed8}
 .cirl-chk input{width:10px;height:10px;flex-shrink:0;margin-top:2px;accent-color:#00843D}
 .cirl-btn{width:100%;background:#00843D;color:#fff;border:none;border-radius:8px;padding:9px;font-size:.7rem;font-weight:700;cursor:pointer;letter-spacing:.3px}
+/* Carousel */
+.cirl-carousel{position:relative;overflow:hidden;border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.13)}
+.cirl-track{display:flex;transition:transform .42s cubic-bezier(.4,0,.2,1);will-change:transform;cursor:grab}
+.cirl-track:active{cursor:grabbing}
+.cirl-slide{flex:0 0 100%;min-width:100%}
+.cirl-dots{display:flex;justify-content:center;gap:7px;margin-top:10px}
+.cirl-dot{width:6px;height:6px;border-radius:50%;background:rgba(0,0,0,.15);cursor:pointer;transition:background .25s,transform .25s}
+.cirl-dot.active{background:#00843D;transform:scale(1.35)}
+.cirl-slide-lbl{text-align:center;font-size:.5rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--lt-text3);margin-top:7px}
+/* Admin dashboard */
+.cirl-dash{background:#fff;font-family:system-ui,-apple-system,sans-serif}
+.cirl-dash-top{padding:7px 10px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;gap:6px}
+.cirl-dash-logos{display:flex;gap:5px;align-items:center;flex-shrink:0}
+.cirl-dash-actions{display:flex;gap:4px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.cirl-dbtn{font-size:.44rem;font-weight:700;padding:3px 6px;border-radius:4px;border:none;cursor:pointer;white-space:nowrap}
+.cirl-dbtn.grn{background:#00843D;color:#fff}
+.cirl-dbtn.blu{background:#2563eb;color:#fff}
+.cirl-dash-body{padding:9px 12px}
+.cirl-dash-h{font-size:.82rem;font-weight:800;color:#1a5c2e;margin-bottom:1px}
+.cirl-dash-sub{font-size:.48rem;color:#9ca3af;margin-bottom:7px}
+.cirl-tabs{display:flex;border-bottom:1px solid #e5e7eb;margin-bottom:7px;overflow:hidden}
+.cirl-tab{font-size:.42rem;font-weight:600;color:#6b7280;padding:4px 6px;white-space:nowrap;cursor:pointer;flex-shrink:0}
+.cirl-tab.act{color:#1a5c2e;border-bottom:2px solid #00843D}
+.cirl-dsearch{width:100%;background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;padding:4px 8px;font-size:.48rem;color:#9ca3af;margin-bottom:5px}
+.cirl-frow{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cirl-fgrp{display:flex;gap:4px}
+.cirl-fsel{background:#f9fafb;border:1px solid #e5e7eb;border-radius:4px;padding:3px 5px;font-size:.44rem;color:#374151}
+.cirl-rcount{font-size:.44rem;color:#6b7280;font-weight:600}
+.cirl-dtable{width:100%;border-collapse:collapse}
+.cirl-dtable thead tr{background:#00843D}
+.cirl-dtable th{color:#fff;font-weight:700;padding:4px 5px;text-align:center;font-size:.42rem;letter-spacing:.3px;white-space:nowrap}
+.cirl-dtable th:first-child{text-align:left}
+.cirl-dtable td{padding:4px 5px;color:#374151;border-bottom:1px solid #f3f4f6;font-size:.46rem;text-align:center}
+.cirl-dtable td:first-child{text-align:left;font-weight:500}
+.cirl-dtable tr:nth-child(even) td{background:#f9fafb}
 
 /* Contact */
 .contact-wrap{display:grid;grid-template-columns:1fr 320px;gap:72px;align-items:start}
@@ -689,6 +724,11 @@ footer{background:var(--ink);border-top:1px solid rgba(140,175,210,.08);padding:
           <a href="https://registrations.cirlyq.com.au" target="_blank" rel="noopener" class="work-link">Visit Live Site ↗</a>
         </div>
         <div class="work-card-vis">
+          <div class="cirl-carousel">
+           <div class="cirl-track" id="cirlTrack">
+
+            <!-- Slide 1: Registration Form -->
+            <div class="cirl-slide">
           <div class="cirl-mock">
             <div class="cirl-card">
               <div class="cirl-hdr">
@@ -772,6 +812,88 @@ footer{background:var(--ink);border-top:1px solid rgba(140,175,210,.08);padding:
                 <button class="cirl-btn">Add to Cart</button>
               </div>
             </div>
+          </div>
+            </div><!-- /slide 1 -->
+
+            <!-- Slide 2: Admin Login -->
+            <div class="cirl-slide">
+              <div class="cirl-mock">
+                <div class="cirl-card">
+                  <div class="cirl-hdr">
+                    <div class="cirl-logos">
+                      <div class="cirl-shield"><svg width="14" height="16" viewBox="0 0 20 22" fill="none"><path d="M10 2L2 5.5v7c0 4.5 3.5 7.5 8 9 4.5-1.5 8-4.5 8-9v-7L10 2z" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.4"/><path d="M7 11l2.5 2.5L14 8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                      <div class="cirl-emblem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.4"/><path d="M12 5v14M7 8.5l10 7M17 8.5L7 15.5" stroke="#fff" stroke-width="1.1"/></svg></div>
+                      <div class="cirl-flag"><svg width="30" height="18" viewBox="0 0 30 18" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="18" fill="#003082"/><path d="M0,0 L15,9 M15,0 L0,9" stroke="#fff" stroke-width="3"/><path d="M0,0 L15,9 M15,0 L0,9" stroke="#CC0001" stroke-width="1.8"/><path d="M7.5,0 L7.5,9 M0,4.5 L15,4.5" stroke="#fff" stroke-width="3"/><path d="M7.5,0 L7.5,9 M0,4.5 L15,4.5" stroke="#CC0001" stroke-width="1.8"/><circle cx="22" cy="5" r="1" fill="#fff"/><circle cx="25" cy="3" r="1" fill="#fff"/><circle cx="27" cy="6" r="1" fill="#fff"/><circle cx="25" cy="9" r="1" fill="#fff"/><circle cx="22" cy="11" r="1" fill="#fff"/></svg></div>
+                    </div>
+                    <div class="cirl-title">Admin Login</div>
+                    <div class="cirl-subtitle" style="color:#6b7280;font-weight:400;font-size:.58rem">Registrations - CIRLYQ 2026</div>
+                  </div>
+                  <div class="cirl-form" style="padding:20px 22px">
+                    <div class="cirl-fg"><div class="cirl-lbl">Username</div><div class="cirl-input">&nbsp;</div></div>
+                    <div class="cirl-fg"><div class="cirl-lbl">Password</div><div class="cirl-input">&nbsp;</div></div>
+                    <button class="cirl-btn" style="margin-top:6px">Login</button>
+                    <p style="text-align:center;font-size:.46rem;color:#bbb;margin-top:14px">Built by <a href="https://www.outsetsolutions.co.nz" style="color:#bbb;text-decoration:underline">Outset Solutions</a></p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /slide 2 -->
+
+            <!-- Slide 3: Admin Dashboard -->
+            <div class="cirl-slide">
+              <div class="cirl-dash">
+                <div class="cirl-dash-top">
+                  <div class="cirl-dash-logos">
+                    <div class="cirl-shield" style="width:22px;height:25px;border-radius:3px 3px 7px 7px"><svg width="10" height="11" viewBox="0 0 20 22" fill="none"><path d="M10 2L2 5.5v7c0 4.5 3.5 7.5 8 9 4.5-1.5 8-4.5 8-9v-7L10 2z" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.4"/><path d="M7 11l2.5 2.5L14 8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div class="cirl-emblem" style="width:24px;height:24px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.4"/><path d="M12 5v14M7 8.5l10 7M17 8.5L7 15.5" stroke="#fff" stroke-width="1.1"/></svg></div>
+                    <div class="cirl-flag" style="width:24px;height:14px"><svg width="24" height="14" viewBox="0 0 30 18" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="18" fill="#003082"/><path d="M0,0 L15,9 M15,0 L0,9" stroke="#fff" stroke-width="3"/><path d="M0,0 L15,9 M15,0 L0,9" stroke="#CC0001" stroke-width="1.8"/><path d="M7.5,0 L7.5,9 M0,4.5 L15,4.5" stroke="#fff" stroke-width="3"/><path d="M7.5,0 L7.5,9 M0,4.5 L15,4.5" stroke="#CC0001" stroke-width="1.8"/><circle cx="22" cy="5" r="1" fill="#fff"/><circle cx="25" cy="3" r="1" fill="#fff"/><circle cx="27" cy="6" r="1" fill="#fff"/><circle cx="25" cy="9" r="1" fill="#fff"/><circle cx="22" cy="11" r="1" fill="#fff"/></svg></div>
+                  </div>
+                  <div class="cirl-dash-actions">
+                    <span style="font-size:.42rem;color:#6b7280">↻ Refresh</span>
+                    <button class="cirl-dbtn grn">↓ Export All</button>
+                    <button class="cirl-dbtn blu">Change Password</button>
+                    <span style="font-size:.42rem;color:#6b7280">Logout</span>
+                  </div>
+                </div>
+                <div class="cirl-dash-body">
+                  <div class="cirl-dash-h">CIRLYQ 2026</div>
+                  <div class="cirl-dash-sub">Registrations Form</div>
+                  <div class="cirl-tabs">
+                    <div class="cirl-tab act">Registrations</div>
+                    <div class="cirl-tab">Divisions</div>
+                    <div class="cirl-tab">Payments</div>
+                    <div class="cirl-tab">Apparel</div>
+                    <div class="cirl-tab">Discount Codes</div>
+                    <div class="cirl-tab">Admin Settings</div>
+                  </div>
+                  <div class="cirl-dsearch">Search name, email, phone, suburb, reg no...</div>
+                  <div class="cirl-frow">
+                    <div class="cirl-fgrp">
+                      <div class="cirl-fsel">All Divisions ▾</div>
+                      <div class="cirl-fsel">All Status ▾</div>
+                      <div class="cirl-fsel">All Records ▾</div>
+                    </div>
+                    <div class="cirl-rcount">152 registrations</div>
+                  </div>
+                  <table class="cirl-dtable">
+                    <thead><tr><th>DIVISION</th><th>REGISTERED</th><th>APPROVED</th><th>PENDING</th><th>SELECTED</th><th>PAID</th></tr></thead>
+                    <tbody>
+                      <tr><td>Under 6</td><td>18</td><td>12</td><td>6</td><td>12</td><td>10</td></tr>
+                      <tr><td>Under 8</td><td>24</td><td>18</td><td>6</td><td>18</td><td>16</td></tr>
+                      <tr><td>Under 10</td><td>31</td><td>25</td><td>6</td><td>25</td><td>22</td></tr>
+                      <tr><td>Under 12</td><td>28</td><td>22</td><td>6</td><td>22</td><td>19</td></tr>
+                      <tr><td>Under 14</td><td>29</td><td>23</td><td>6</td><td>23</td><td>20</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div><!-- /slide 3 -->
+
+           </div><!-- /track -->
+          </div><!-- /carousel -->
+          <div class="cirl-dots">
+            <div class="cirl-dot active" onclick="goSlide(0)"></div>
+            <div class="cirl-dot" onclick="goSlide(1)"></div>
+            <div class="cirl-dot" onclick="goSlide(2)"></div>
           </div>
         </div>
       </div>
@@ -1218,6 +1340,38 @@ function copyEmail(e){
     setTimeout(function(){ el.textContent='info@outsetsolutions.co.nz'; },3000);
   });
 }
+
+/* CIRLYQ carousel */
+(function(){
+  const track=document.getElementById('cirlTrack');
+  if(!track)return;
+  const dots=document.querySelectorAll('.cirl-dot');
+  const total=3;
+  let cur=0,startX=0,dragging=false,autoTimer;
+  function go(n){
+    cur=((n%total)+total)%total;
+    track.style.transform=`translateX(-${cur*100}%)`;
+    dots.forEach((d,i)=>d.classList.toggle('active',i===cur));
+    clearInterval(autoTimer);
+    autoTimer=setInterval(()=>go(cur+1),4500);
+  }
+  track.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;dragging=true},{passive:true});
+  track.addEventListener('touchend',e=>{
+    if(!dragging)return;
+    const diff=startX-e.changedTouches[0].clientX;
+    if(Math.abs(diff)>35)go(diff>0?cur+1:cur-1);
+    dragging=false;
+  },{passive:true});
+  track.addEventListener('mousedown',e=>{startX=e.clientX;dragging=true;});
+  window.addEventListener('mouseup',e=>{
+    if(!dragging)return;
+    const diff=startX-e.clientX;
+    if(Math.abs(diff)>35)go(diff>0?cur+1:cur-1);
+    dragging=false;
+  });
+  window.goSlide=go;
+  autoTimer=setInterval(()=>go(cur+1),4500);
+})();
 
 document.getElementById('cForm').addEventListener('submit',async function(e){
   e.preventDefault();
