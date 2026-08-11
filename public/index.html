@@ -178,32 +178,36 @@ a{color:inherit;text-decoration:none}
 /* Work card — two-column with mockup */
 .work-card-inner{display:grid;grid-template-columns:1fr 320px;gap:52px;align-items:center}
 .work-card-vis{border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.13);flex-shrink:0}
-/* CIRLYQ mockup */
-.cirl-mock{background:#fff;font-family:system-ui,-apple-system,sans-serif}
-.cirl-top{background:linear-gradient(135deg,#0d2137 0%,#1a3a5c 100%);padding:16px 20px}
-.cirl-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.cirl-logo-dot{width:28px;height:28px;background:#00843D;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
-.cirl-brand{font-size:.78rem;font-weight:700;color:#fff;letter-spacing:.5px}
-.cirl-season{font-size:.54rem;color:rgba(255,255,255,.4);margin-top:2px;line-height:1.4}
-.cirl-event-tag{display:inline-flex;align-items:center;gap:5px;background:rgba(0,132,61,.25);border:1px solid rgba(0,132,61,.5);color:#4ade80;font-size:.56rem;font-weight:600;padding:3px 9px;border-radius:20px}
-.cirl-event-tag::before{content:'';width:5px;height:5px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px rgba(74,222,128,.6)}
-.cirl-body{padding:14px 18px}
-.cirl-section-lbl{font-size:.52rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lt-text3);margin-bottom:8px}
-.cirl-divs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:14px}
-.cirl-div{border:1px solid var(--lt-border);border-radius:8px;padding:8px 6px;text-align:center}
-.cirl-div.sel{border-color:#00843D;background:rgba(0,132,61,.06);box-shadow:0 0 0 1px #00843D}
-.cirl-div-age{font-size:.72rem;font-weight:700;color:var(--lt-text)}
-.cirl-div-name{font-size:.48rem;color:var(--lt-text3);margin-top:2px}
-.cirl-fields{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
-.cirl-field-row{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.cirl-field{background:var(--lt-bg);border:1px solid var(--lt-border);border-radius:7px;padding:7px 10px}
-.cirl-field-lbl{font-size:.48rem;text-transform:uppercase;letter-spacing:1px;color:var(--lt-text3);margin-bottom:2px}
-.cirl-field-val{font-size:.68rem;color:var(--lt-text)}
-.cirl-fee-row{display:flex;justify-content:space-between;align-items:center;background:rgba(0,132,61,.05);border:1px solid rgba(0,132,61,.15);border-radius:8px;padding:9px 12px;margin-bottom:12px}
-.cirl-fee-label{font-size:.7rem;color:var(--lt-text2)}
-.cirl-fee-badge{font-size:.55rem;color:#00843D;font-weight:600;background:rgba(0,132,61,.12);padding:2px 8px;border-radius:12px;margin-left:6px;white-space:nowrap}
-.cirl-fee-amount{font-size:.95rem;font-weight:300;color:var(--lt-text)}
-.cirl-btn{width:100%;background:#0d2137;color:#fff;border:none;border-radius:8px;padding:10px;font-size:.72rem;font-weight:700;cursor:pointer;letter-spacing:.3px}
+/* CIRLYQ mockup — matches live form */
+.cirl-mock{background:#e6ece6;font-family:system-ui,-apple-system,sans-serif;padding:14px}
+.cirl-card{background:#fff;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.1)}
+.cirl-hdr{padding:16px 14px 10px;text-align:center;border-bottom:1px solid #edf0ec}
+.cirl-logos{display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:10px}
+.cirl-shield{width:30px;height:34px;background:#6B1B2A;border-radius:4px 4px 10px 10px;display:grid;place-items:center;flex-shrink:0}
+.cirl-emblem{width:34px;height:34px;border-radius:50%;background:#00843D;display:grid;place-items:center;border:2px solid rgba(0,0,0,.06);flex-shrink:0}
+.cirl-flag{width:30px;height:18px;border-radius:3px;overflow:hidden;border:1px solid rgba(0,0,0,.1);flex-shrink:0}
+.cirl-title{font-size:.88rem;font-weight:800;color:#6B1B2A;letter-spacing:2px;text-transform:uppercase;margin-bottom:2px}
+.cirl-subtitle{font-size:.55rem;font-weight:600;color:#1a5c2e;margin-bottom:3px}
+.cirl-tagline{font-size:.52rem;color:#7a8f7a}
+.cirl-form{padding:11px 14px}
+.cirl-row{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:7px}
+.cirl-fg{margin-bottom:7px}
+.cirl-lbl{font-size:.45rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#374151;margin-bottom:3px}
+.cirl-input{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:7px;padding:6px 9px;font-size:.62rem;color:#9ca3af}
+.cirl-input.val{color:#374151}
+.cirl-sel{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:7px;padding:6px 9px;font-size:.62rem;display:flex;justify-content:space-between;align-items:center}
+.cirl-sel-v{color:#374151}
+.cirl-sel-ph{color:#9ca3af}
+.cirl-arr{color:#9ca3af;font-size:.5rem}
+.cirl-upload{background:#f9fafb;border:1.5px dashed #d1d5db;border-radius:7px;padding:5px 9px;display:flex;align-items:center;gap:7px}
+.cirl-file-btn{background:#e5e7eb;border:1px solid #d1d5db;border-radius:4px;padding:2px 7px;font-size:.52rem;color:#374151;white-space:nowrap}
+.cirl-file-none{color:#9ca3af;font-size:.56rem}
+.cirl-checks{display:flex;flex-direction:column;gap:5px;margin-bottom:8px}
+.cirl-chk{display:flex;align-items:flex-start;gap:6px;font-size:.52rem;line-height:1.4;padding:5px 8px;border-radius:6px;border:1px solid #e5e7eb}
+.cirl-chk.grn{border-color:rgba(0,132,61,.3);background:rgba(0,132,61,.04);color:#1a5c2e}
+.cirl-chk.blu{border-color:rgba(59,130,246,.25);background:rgba(59,130,246,.03);color:#1d4ed8}
+.cirl-chk input{width:10px;height:10px;flex-shrink:0;margin-top:2px;accent-color:#00843D}
+.cirl-btn{width:100%;background:#00843D;color:#fff;border:none;border-radius:8px;padding:9px;font-size:.7rem;font-weight:700;cursor:pointer;letter-spacing:.3px}
 
 /* Contact */
 .contact-wrap{display:grid;grid-template-columns:1fr 320px;gap:72px;align-items:start}
@@ -686,50 +690,87 @@ footer{background:var(--ink);border-top:1px solid rgba(140,175,210,.08);padding:
         </div>
         <div class="work-card-vis">
           <div class="cirl-mock">
-            <div class="cirl-top">
-              <div class="cirl-logo-row">
-                <div class="cirl-logo-dot">
-                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
-                    <ellipse cx="10" cy="10" rx="8" ry="5.5" stroke="#fff" stroke-width="1.5"/>
-                    <path d="M10 4.5v11M6 7.5l8 5M14 7.5l-8 5" stroke="#fff" stroke-width="1.2"/>
-                  </svg>
+            <div class="cirl-card">
+              <div class="cirl-hdr">
+                <div class="cirl-logos">
+                  <div class="cirl-shield">
+                    <svg width="14" height="16" viewBox="0 0 20 22" fill="none">
+                      <path d="M10 2L2 5.5v7c0 4.5 3.5 7.5 8 9 4.5-1.5 8-4.5 8-9v-7L10 2z" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.4"/>
+                      <path d="M7 11l2.5 2.5L14 8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="cirl-emblem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.4"/>
+                      <path d="M12 5v14M7 8.5l10 7M17 8.5L7 15.5" stroke="#fff" stroke-width="1.1"/>
+                    </svg>
+                  </div>
+                  <div class="cirl-flag">
+                    <svg width="30" height="18" viewBox="0 0 30 18" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="30" height="18" fill="#003082"/>
+                      <rect width="15" height="9" fill="#003082"/>
+                      <path d="M0,0 L15,9 M15,0 L0,9" stroke="#fff" stroke-width="3"/>
+                      <path d="M0,0 L15,9 M15,0 L0,9" stroke="#CC0001" stroke-width="1.8"/>
+                      <path d="M7.5,0 L7.5,9 M0,4.5 L15,4.5" stroke="#fff" stroke-width="3"/>
+                      <path d="M7.5,0 L7.5,9 M0,4.5 L15,4.5" stroke="#CC0001" stroke-width="1.8"/>
+                      <circle cx="22" cy="5" r="1" fill="#fff"/>
+                      <circle cx="25" cy="3" r="1" fill="#fff"/>
+                      <circle cx="27" cy="6" r="1" fill="#fff"/>
+                      <circle cx="25" cy="9" r="1" fill="#fff"/>
+                      <circle cx="22" cy="11" r="1" fill="#fff"/>
+                    </svg>
+                  </div>
                 </div>
-                <div>
-                  <div class="cirl-brand">CIRLYQ</div>
-                  <div class="cirl-season">Cook Island Rugby League &amp;<br>Youth Development Qld Inc.</div>
+                <div class="cirl-title">CIRLYQ</div>
+                <div class="cirl-subtitle">Cook Island Rugby League &amp; Youth Development QLD</div>
+                <div class="cirl-tagline">2026 Player &amp; Team Registration</div>
+              </div>
+              <div class="cirl-form">
+                <div class="cirl-row">
+                  <div><div class="cirl-lbl">Full Name *</div><div class="cirl-input">e.g. Junior Tama</div></div>
+                  <div><div class="cirl-lbl">Date of Birth *</div><div class="cirl-input">dd/mm/yyyy</div></div>
                 </div>
-              </div>
-              <div style="display:flex;align-items:center;justify-content:space-between">
-                <div style="font-size:.68rem;font-weight:300;color:rgba(255,255,255,.65)">2026 Season Registration</div>
-                <div class="cirl-event-tag">Open</div>
-              </div>
-            </div>
-            <div class="cirl-body">
-              <div class="cirl-section-lbl">Select Division</div>
-              <div class="cirl-divs">
-                <div class="cirl-div"><div class="cirl-div-age">U6</div><div class="cirl-div-name">Under 6</div></div>
-                <div class="cirl-div"><div class="cirl-div-age">U8</div><div class="cirl-div-name">Under 8</div></div>
-                <div class="cirl-div sel"><div class="cirl-div-age">U10</div><div class="cirl-div-name">Under 10</div></div>
-                <div class="cirl-div"><div class="cirl-div-age">U12</div><div class="cirl-div-name">Under 12</div></div>
-                <div class="cirl-div"><div class="cirl-div-age">U14</div><div class="cirl-div-name">Under 14</div></div>
-                <div class="cirl-div"><div class="cirl-div-age">Open</div><div class="cirl-div-name">Open Age</div></div>
-              </div>
-              <div class="cirl-section-lbl">Player Details</div>
-              <div class="cirl-fields">
-                <div class="cirl-field-row">
-                  <div class="cirl-field"><div class="cirl-field-lbl">First Name</div><div class="cirl-field-val">Tane</div></div>
-                  <div class="cirl-field"><div class="cirl-field-lbl">Last Name</div><div class="cirl-field-val">Raiti</div></div>
+                <div class="cirl-row">
+                  <div><div class="cirl-lbl">Role *</div><div class="cirl-sel"><span class="cirl-sel-v">Player</span><span class="cirl-arr">▾</span></div></div>
+                  <div><div class="cirl-lbl">Gender *</div><div class="cirl-sel"><span class="cirl-sel-ph">— Select —</span><span class="cirl-arr">▾</span></div></div>
                 </div>
-                <div class="cirl-field-row">
-                  <div class="cirl-field"><div class="cirl-field-lbl">Date of Birth</div><div class="cirl-field-val">12 Mar 2016</div></div>
-                  <div class="cirl-field"><div class="cirl-field-lbl">Email</div><div class="cirl-field-val">parent@email.com</div></div>
+                <div class="cirl-fg">
+                  <div class="cirl-lbl">Division *</div>
+                  <div class="cirl-sel" style="border-style:dashed"><span class="cirl-sel-ph">Enter date of birth and gender above</span><span class="cirl-arr">▾</span></div>
                 </div>
+                <div class="cirl-row">
+                  <div><div class="cirl-lbl">Preferred Position *</div><div class="cirl-sel"><span class="cirl-sel-ph">— Select —</span><span class="cirl-arr">▾</span></div></div>
+                  <div><div class="cirl-lbl">Secondary Position</div><div class="cirl-sel"><span class="cirl-sel-ph">— Select —</span><span class="cirl-arr">▾</span></div></div>
+                </div>
+                <div class="cirl-row">
+                  <div><div class="cirl-lbl">Phone</div><div class="cirl-input">+61 4XX XXX XXX</div></div>
+                  <div><div class="cirl-lbl">Email</div><div class="cirl-input">your@email.com</div></div>
+                </div>
+                <div class="cirl-fg">
+                  <div class="cirl-lbl">Area / Suburb *</div>
+                  <div class="cirl-sel"><span class="cirl-sel-ph">— Select your suburb —</span><span class="cirl-arr">▾</span></div>
+                </div>
+                <div class="cirl-row">
+                  <div><div class="cirl-lbl">Jersey Size *</div><div class="cirl-sel"><span class="cirl-sel-ph">— Select size —</span><span class="cirl-arr">▾</span></div></div>
+                  <div><div class="cirl-lbl">Shorts Size *</div><div class="cirl-sel"><span class="cirl-sel-ph">— Select size —</span><span class="cirl-arr">▾</span></div></div>
+                </div>
+                <div class="cirl-fg">
+                  <div class="cirl-lbl">Photo *</div>
+                  <div class="cirl-upload"><span class="cirl-file-btn">Choose File</span><span class="cirl-file-none">No file chosen</span></div>
+                  <div style="font-size:.46rem;color:#7a8f7a;margin-top:3px">Upload a clear head-and-shoulders photo (JPG or PNG, max 5MB)</div>
+                </div>
+                <div class="cirl-fg">
+                  <div class="cirl-lbl">Blue Card *</div>
+                  <div class="cirl-upload"><span class="cirl-file-btn">Choose File</span><span class="cirl-file-none">No file chosen</span></div>
+                  <div style="font-size:.46rem;color:#7a8f7a;margin-top:3px">Queensland Working With Children Check — mandatory for all coaches &amp; managers (JPG, PNG or PDF, max 5MB)</div>
+                </div>
+                <div class="cirl-checks">
+                  <div class="cirl-chk grn"><input type="checkbox" disabled><span>I confirm I am of Cook Islands heritage and eligible to represent the Cook Islands at QPICC 2026.</span></div>
+                  <div class="cirl-chk blu"><input type="checkbox" disabled><span>I consent to receiving email notifications from CIRLYQ regarding my registration, selection status, and payment reminders.</span></div>
+                  <div class="cirl-chk"><input type="checkbox" disabled><span>I have read and agree to the <u>Terms &amp; Conditions</u> below.</span></div>
+                </div>
+                <button class="cirl-btn">Add to Cart</button>
               </div>
-              <div class="cirl-fee-row">
-                <div class="cirl-fee-label">Registration Fee <span class="cirl-fee-badge">✓ Voucher Applied</span></div>
-                <div class="cirl-fee-amount">$0.00</div>
-              </div>
-              <button class="cirl-btn">Register &amp; Pay →</button>
             </div>
           </div>
         </div>
