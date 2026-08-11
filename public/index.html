@@ -160,7 +160,7 @@ a{color:inherit;text-decoration:none}
 @media(max-width:880px){.svc-ap{padding:70px 24px}.svc-ap-inner{grid-template-columns:1fr;gap:48px}.svc-ap.flip .svc-ap-text,.svc-ap.flip .svc-ap-vis{order:unset}}
 
 /* Work */
-.work-card{position:relative;background:var(--lt-card);border-radius:var(--r);padding:38px;overflow:hidden;box-shadow:var(--lt-shadow);max-width:760px;transition:box-shadow .3s,transform .3s}
+.work-card{position:relative;background:var(--lt-card);border-radius:var(--r);padding:38px;overflow:hidden;box-shadow:var(--lt-shadow);transition:box-shadow .3s,transform .3s}
 .work-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--amber) 0%,rgba(200,112,42,.3) 60%,transparent 100%)}
 .work-card:hover{transform:translateY(-3px);box-shadow:0 8px 36px rgba(0,0,0,0.11),0 0 0 1px rgba(0,0,0,0.05)}
 .work-top{display:flex;align-items:center;gap:12px;margin-bottom:18px}
@@ -174,6 +174,36 @@ a{color:inherit;text-decoration:none}
 .work-desc{font-size:.9rem;color:var(--lt-text2);line-height:1.74;margin-bottom:26px;max-width:570px}
 .work-link{display:inline-flex;align-items:center;font-size:.85rem;font-weight:700;color:var(--amber);border-bottom:1px solid rgba(200,112,42,.35);padding-bottom:2px;transition:color .2s,border-color .2s}
 .work-link:hover{color:var(--amber-lt);border-color:var(--amber-lt)}
+
+/* Work card — two-column with mockup */
+.work-card-inner{display:grid;grid-template-columns:1fr 320px;gap:52px;align-items:center}
+.work-card-vis{border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.13);flex-shrink:0}
+/* CIRLYQ mockup */
+.cirl-mock{background:#fff;font-family:system-ui,-apple-system,sans-serif}
+.cirl-top{background:linear-gradient(135deg,#0d2137 0%,#1a3a5c 100%);padding:16px 20px}
+.cirl-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.cirl-logo-dot{width:28px;height:28px;background:#00843D;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+.cirl-brand{font-size:.78rem;font-weight:700;color:#fff;letter-spacing:.5px}
+.cirl-season{font-size:.54rem;color:rgba(255,255,255,.4);margin-top:2px;line-height:1.4}
+.cirl-event-tag{display:inline-flex;align-items:center;gap:5px;background:rgba(0,132,61,.25);border:1px solid rgba(0,132,61,.5);color:#4ade80;font-size:.56rem;font-weight:600;padding:3px 9px;border-radius:20px}
+.cirl-event-tag::before{content:'';width:5px;height:5px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px rgba(74,222,128,.6)}
+.cirl-body{padding:14px 18px}
+.cirl-section-lbl{font-size:.52rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lt-text3);margin-bottom:8px}
+.cirl-divs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:14px}
+.cirl-div{border:1px solid var(--lt-border);border-radius:8px;padding:8px 6px;text-align:center}
+.cirl-div.sel{border-color:#00843D;background:rgba(0,132,61,.06);box-shadow:0 0 0 1px #00843D}
+.cirl-div-age{font-size:.72rem;font-weight:700;color:var(--lt-text)}
+.cirl-div-name{font-size:.48rem;color:var(--lt-text3);margin-top:2px}
+.cirl-fields{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.cirl-field-row{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.cirl-field{background:var(--lt-bg);border:1px solid var(--lt-border);border-radius:7px;padding:7px 10px}
+.cirl-field-lbl{font-size:.48rem;text-transform:uppercase;letter-spacing:1px;color:var(--lt-text3);margin-bottom:2px}
+.cirl-field-val{font-size:.68rem;color:var(--lt-text)}
+.cirl-fee-row{display:flex;justify-content:space-between;align-items:center;background:rgba(0,132,61,.05);border:1px solid rgba(0,132,61,.15);border-radius:8px;padding:9px 12px;margin-bottom:12px}
+.cirl-fee-label{font-size:.7rem;color:var(--lt-text2)}
+.cirl-fee-badge{font-size:.55rem;color:#00843D;font-weight:600;background:rgba(0,132,61,.12);padding:2px 8px;border-radius:12px;margin-left:6px;white-space:nowrap}
+.cirl-fee-amount{font-size:.95rem;font-weight:300;color:var(--lt-text)}
+.cirl-btn{width:100%;background:#0d2137;color:#fff;border:none;border-radius:8px;padding:10px;font-size:.72rem;font-weight:700;cursor:pointer;letter-spacing:.3px}
 
 /* Contact */
 .contact-wrap{display:grid;grid-template-columns:1fr 320px;gap:72px;align-items:start}
@@ -386,6 +416,8 @@ footer{background:var(--ink);border-top:1px solid rgba(140,175,210,.08);padding:
   .svc-grid{grid-template-columns:1fr}
   .contact-wrap{grid-template-columns:1fr;gap:44px}
   .form-row{grid-template-columns:1fr}
+  .work-card-inner{grid-template-columns:1fr}
+  .work-card-vis{display:none}
 }
 /* Hamburger button */
 .nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px;border-radius:8px;transition:background .2s}
@@ -636,19 +668,72 @@ footer{background:var(--ink);border-top:1px solid rgba(140,175,210,.08);padding:
     <div class="sec-label fade-up">Live Builds</div>
     <h2 class="sec-h2 fade-up">Shipped and running.</h2>
     <div class="work-card fade-up">
-      <div class="work-top">
-        <div class="live-badge"><span class="live-dot"></span>Live</div>
-        <div class="tags">
-          <span class="tag">Registration</span>
-          <span class="tag">Square Payments</span>
-          <span class="tag">Admin Dashboard</span>
-          <span class="tag">Sports Vouchers</span>
+      <div class="work-card-inner">
+        <div class="work-card-text">
+          <div class="work-top">
+            <div class="live-badge"><span class="live-dot"></span>Live</div>
+            <div class="tags">
+              <span class="tag">Registration</span>
+              <span class="tag">Square Payments</span>
+              <span class="tag">Admin Dashboard</span>
+              <span class="tag">Sports Vouchers</span>
+            </div>
+          </div>
+          <h3 class="work-title">CIRLYQ 2026</h3>
+          <p class="work-org">Cook Island Rugby League &amp; Youth Development Qld Inc.</p>
+          <p class="work-desc">Full player registration platform for the 2026 season. Multi-tier age divisions, Square payments, Play On! Queensland sports voucher integration, dynamic discount codes, and a complete admin dashboard — built from scratch and live for launch day.</p>
+          <a href="https://registrations.cirlyq.com.au" target="_blank" rel="noopener" class="work-link">Visit Live Site ↗</a>
+        </div>
+        <div class="work-card-vis">
+          <div class="cirl-mock">
+            <div class="cirl-top">
+              <div class="cirl-logo-row">
+                <div class="cirl-logo-dot">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
+                    <ellipse cx="10" cy="10" rx="8" ry="5.5" stroke="#fff" stroke-width="1.5"/>
+                    <path d="M10 4.5v11M6 7.5l8 5M14 7.5l-8 5" stroke="#fff" stroke-width="1.2"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="cirl-brand">CIRLYQ</div>
+                  <div class="cirl-season">Cook Island Rugby League &amp;<br>Youth Development Qld Inc.</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <div style="font-size:.68rem;font-weight:300;color:rgba(255,255,255,.65)">2026 Season Registration</div>
+                <div class="cirl-event-tag">Open</div>
+              </div>
+            </div>
+            <div class="cirl-body">
+              <div class="cirl-section-lbl">Select Division</div>
+              <div class="cirl-divs">
+                <div class="cirl-div"><div class="cirl-div-age">U6</div><div class="cirl-div-name">Under 6</div></div>
+                <div class="cirl-div"><div class="cirl-div-age">U8</div><div class="cirl-div-name">Under 8</div></div>
+                <div class="cirl-div sel"><div class="cirl-div-age">U10</div><div class="cirl-div-name">Under 10</div></div>
+                <div class="cirl-div"><div class="cirl-div-age">U12</div><div class="cirl-div-name">Under 12</div></div>
+                <div class="cirl-div"><div class="cirl-div-age">U14</div><div class="cirl-div-name">Under 14</div></div>
+                <div class="cirl-div"><div class="cirl-div-age">Open</div><div class="cirl-div-name">Open Age</div></div>
+              </div>
+              <div class="cirl-section-lbl">Player Details</div>
+              <div class="cirl-fields">
+                <div class="cirl-field-row">
+                  <div class="cirl-field"><div class="cirl-field-lbl">First Name</div><div class="cirl-field-val">Tane</div></div>
+                  <div class="cirl-field"><div class="cirl-field-lbl">Last Name</div><div class="cirl-field-val">Raiti</div></div>
+                </div>
+                <div class="cirl-field-row">
+                  <div class="cirl-field"><div class="cirl-field-lbl">Date of Birth</div><div class="cirl-field-val">12 Mar 2016</div></div>
+                  <div class="cirl-field"><div class="cirl-field-lbl">Email</div><div class="cirl-field-val">parent@email.com</div></div>
+                </div>
+              </div>
+              <div class="cirl-fee-row">
+                <div class="cirl-fee-label">Registration Fee <span class="cirl-fee-badge">✓ Voucher Applied</span></div>
+                <div class="cirl-fee-amount">$0.00</div>
+              </div>
+              <button class="cirl-btn">Register &amp; Pay →</button>
+            </div>
+          </div>
         </div>
       </div>
-      <h3 class="work-title">CIRLYQ 2026</h3>
-      <p class="work-org">Cook Island Rugby League &amp; Youth Development Qld Inc.</p>
-      <p class="work-desc">Full player registration platform for the 2026 season. Multi-tier age divisions, Square payments, Play On! Queensland sports voucher integration, dynamic discount codes, and a complete admin dashboard — built from scratch and live for launch day.</p>
-      <a href="https://registrations.cirlyq.com.au" target="_blank" rel="noopener" class="work-link">Visit Live Site ↗</a>
     </div>
   </div>
 </section>
